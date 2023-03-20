@@ -6,8 +6,9 @@ import AccordionSummary from "@mui/material/AccordionSummary";
 import Typography from "@mui/material/Typography";
 import Link from "react-router-dom/Link";
 import AddIcon from "@mui/icons-material/Add";
-import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
-import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
+// import AddOutlinedIcon from "@mui/icons-material/AddOutlined";
+// import RemoveOutlinedIcon from "@mui/icons-material/RemoveOutlined";
+import { Minimize } from "@mui/icons-material";
 export default function MuiAccordian() {
   const [expanded, setExpanded] = React.useState(false);
 
@@ -22,8 +23,7 @@ export default function MuiAccordian() {
         onChange={handleChange("panel1")}
       >
         <AccordionSummary
-          expandIcon={<AddOutlinedIcon />}
-          expanded={<RemoveOutlinedIcon />}
+          expandIcon={expanded === "panel1" ? <Minimize /> : <AddIcon />}
           aria-controls="panel1bh-content"
           id="panel1bh-header"
         >
@@ -40,7 +40,7 @@ export default function MuiAccordian() {
         onChange={handleChange("panel2")}
       >
         <AccordionSummary
-          expandIcon={<AddIcon />}
+          expandIcon={expanded === "panel2" ? <Minimize /> : <AddIcon />}
           aria-controls="panel2bh-content"
           id="panel2bh-header"
         >
@@ -57,7 +57,7 @@ export default function MuiAccordian() {
         onChange={handleChange("panel3")}
       >
         <AccordionSummary
-          expandIcon={<AddIcon />}
+          expandIcon={expanded === "panel2" ? <Minimize /> : <AddIcon />}
           aria-controls="panel3bh-content"
           id="panel3bh-header"
         >
