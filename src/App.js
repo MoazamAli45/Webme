@@ -9,7 +9,7 @@ import Error from "./page/Error";
 import BlogMain from "./page/BlogMain";
 function App() {
   return (
-    <div className="App">
+    <>
       <Switch>
         <Route exact path="/" component={page1} />
         <Route exact path="/blog-main" component={BlogMain} />
@@ -17,7 +17,7 @@ function App() {
         <Route exact path="/about-us" component={page2} />
         <Route path="/*" component={Error} />
       </Switch>
-    </div>
+    </>
   );
 }
 

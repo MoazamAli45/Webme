@@ -79,8 +79,6 @@ const Footer = () => {
             </uL>
           </div>
         </div>
-
-        <img src={green} alt="green" className={styles.green} />
       </footer>
     </>
   );
